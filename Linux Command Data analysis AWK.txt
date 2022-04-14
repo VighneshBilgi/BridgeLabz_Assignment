@@ -1,0 +1,43 @@
+Name : Vighnesh Bilgi
+Linux Command : Data Analysis / manipulation (AWK)
+----------------------------------------------------------------------------------
+i.
+
+bilgi@LAPTOP-R0EFS3T8 MINGW64 ~/OneDrive/Documents/BridgeLabz/Day 3 Day 3 Terminal Cmds - shell scripts,loops,conditions
+$ awk '{if($4 > 10000) print $2" "$7}' data.csv
+EmployeeName TotalPay
+NATHANIEL 567595
+GARY 538909
+ALBERT 335279
+CHRISTOPHER 332343
+PATRICK 326373
+DAVID 316285
+ALSON 315981
+DAVID 307899
+JOANNE 302377
+PATRICIA 297608
+EDWARD 294580
+
+-----------------------------------
+ii.
+
+bilgi@LAPTOP-R0EFS3T8 MINGW64 ~/OneDrive/Documents/BridgeLabz/Day 3 Day 3 Terminal Cmds - shell scripts,loops,conditions
+$ awk '{if($3 == "CAPTAIN") print $3" "$7}' data.csv
+CAPTAIN 538909
+CAPTAIN 335279
+CAPTAIN 297608
+-----------------------------------
+iii.
+
+bilgi@LAPTOP-R0EFS3T8 MINGW64 ~/OneDrive/Documents/BridgeLabz/Day 3 Day 3 Terminal Cmds - shell scripts,loops,conditions
+$ awk '{if(($5 >= 7000)&& ($5 <= 10000)) print $3" "$5}' data.csv
+DEPUTYCHIEF 9737
+ASSTDEPUTY 8601
+
+-----------------------------------------------
+iv.
+
+bilgi@LAPTOP-R0EFS3T8 MINGW64 ~/OneDrive/Documents/BridgeLabz/Day 3 Day 3 Terminal Cmds - shell scripts,loops,conditions
+$ awk '{sum += $4}END{print sum/(NR-1)}' data.csv
+172333
+
